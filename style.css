@@ -1,0 +1,33 @@
+.bg-cover{
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+.bg-cover-mask{
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-left: 0;
+    margin-right: 0;
+}
+.navigator{
+    margin: 0 0 0 0;
+    padding: 28px 20px 0px;
+}
+.navigator-center{
+    width: 68%;
+    height: 88px;
+    margin: auto;
+    text-align: center;
+}
+.navigator-box{
+    background: #233E99;
+    border-style: none; 
+    color: white;
+}
+.navigator-item{
+    padding-top: 20px;
+}
+.logo{
+    padding-top: 10px;
+}
