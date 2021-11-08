@@ -22,51 +22,38 @@
 
         <div class="navigator-center">
 
-          <ul class="list-group list-group-horizontal w-100" style="height: 100%;">
-
-            <li class="list-group-item navigator-box"
-              style="border-top-left-radius: 50px; border-bottom-left-radius: 50px;">
-              <div class="navigator-item logo">
-                <a href="#">
-                  <img src="Logo.png" alt="logo" style="max-height: 45px;">
-                </a>
+          <nav class="navbar navbar-expand-lg navbar-dark navigator-box">
+            <div class="container-fluid">
+              <a class="navbar-brand px-2" href="#">
+                <img src="Logo.png" alt="logo" style="max-height: 45px;">
+              </a>
+              <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText" style="width: 100vh;">
+                <ul class="nav nav-fill me-auto mb-2 mb-lg-0 w-100 px-2">
+                  <li class="nav-item">
+                    <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Fitur</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Tentang</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Kontak</a>
+                  </li>
+                  <li class="nav-item">
+                    <button class="btn btn-login">
+                      Login
+                    </button>
+                  </li>
+                </ul>
               </div>
-            </li>
-
-            <li class="list-group-item navigator-box">
-              <div class="navigator-item">
-                Home
-              </div>
-            </li>
-
-            <li class="list-group-item navigator-box">
-              <div class="navigator-item">
-                Fitur
-              </div>
-            </li>
-
-            <li class="list-group-item navigator-box">
-              <div class="navigator-item">
-                Tentang
-              </div>
-            </li>
-
-            <li class="list-group-item navigator-box">
-              <div class="navigator-item">
-                Kontak
-              </div>
-            </li>
-
-            <li class="list-group-item navigator-box"
-              style="border-top-right-radius: 50px; border-bottom-right-radius: 50px;">
-              <div class="navigator-item">
-                <button class="btn" style="border-style: solid; border-width: 3px; border-color: white;">
-                  Login
-                </button>
-              </div>
-            </li>
-
-          </ul>
+            </div>
+          </nav>
 
         </div>
 
