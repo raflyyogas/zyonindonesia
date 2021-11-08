@@ -2,99 +2,167 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <title>Zyon Indonesia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Zyon Indonesia</title>
 </head>
 
 <body>
 
-  <!-- UTAMA -->
-  <div class="container-fluid bg-image bg-cover" style="height: 100vh;">
-    <div class="mask bg-cover-mask position-static" style="height: 100vh;">
-      <!-- NAVIGATOR -->
-      <div class="container-fluid navigator">
-        <div class="navigator-center">
+    <!-- UTAMA -->
+    <div class="container-fluid bg-image bg-cover" style="height: 100vh;">
+        <div class="mask bg-cover-mask position-static" style="height: 100vh;">
+            <!-- NAVIGATOR -->
+            <div class="container-fluid navigator">
+                <div class="navigator-center">
 
-          <nav class="navbar navbar-expand-lg navbar-dark navigator-box">
+                    <nav class="navbar navbar-expand-lg navbar-dark navigator-box">
 
-            <div class="container-fluid">
+                        <div class="container-fluid">
 
-              <a class="navbar-brand px-2" href="#">
-                <img src="Logo.png" alt="logo" style="max-height: 45px;">
-              </a>
-              <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                            <a class="navbar-brand px-2" href="#">
+                                <img src="Logo.png" alt="logo" style="max-height: 45px;">
+                            </a>
+                            <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarText" style="width: 100vh;">
-                <ul class="navbar-nav nav nav-fill me-auto mb-2 mb-lg-0 w-100 px-2">
-                  <li class="nav-item">
-                    <a class="nav-link text-light" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Fitur</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Tentang</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Kontak</a>
-                  </li>
-                  <li class="nav-item">
-                    <button class="btn btn-login">
+                            <div class="collapse navbar-collapse" id="navbarText" style="width: 100vh;">
+                                <ul class="navbar-nav nav nav-fill me-auto mb-2 mb-lg-0 w-100 px-2">
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" href="#">Fitur</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" href="#">Tentang</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-light" href="#">Kontak</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button class="btn btn-login">
                       Login
                     </button>
-                  </li>
-                </ul>
-              </div>
-            
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </nav>
+
+                </div>
             </div>
-          
-          </nav>
 
-        </div>
-      </div>
-
-      <!-- ISI-UTAMA -->
-      <div class="container-fluid konten-utama">
-        <h1 class="text-utama">
-          Ayo Mulai Peduli pada Kesehatan Mental !
-        </h1>
-        <button class="button-utama">
+            <!-- ISI-UTAMA -->
+            <div class="container-fluid konten-utama">
+                <h1 class="text-utama">
+                    Ayo Mulai Peduli pada Kesehatan Mental !
+                </h1>
+                <button class="button-utama">
           Konsultasi dengan Ekspert
         </button>
-        <button class="btn">
-t
-        </button>
-      </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FITUR -->
+    <div class="container-fluid position-static" style="height: 100vh;">
+
+        <!-- HEADER FITUR -->
+        <div class="fitur-head">
+            <h1 class="fitur-head-text">
+                FITUR ZYON
+            </h1>
+        </div>
+
+        <!-- ISI FITUR -->
+        <ul class="nav nav-pills nav-justified fitur-navigator" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active link-light border-rad" id="pills-konsultasi-tab" data-toggle="pill" href="#pills-konsultasi" role="tab" aria-controls="pills-konsultasi" aria-selected="true">Konsultasi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light border-rad" id="pills-self-care-tab" data-toggle="pill" href="#pills-self-care" role="tab" aria-controls="pills-self-care" aria-selected="false">Self Care</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light border-rad" id="pills-forum-tab" data-toggle="pill" href="#pills-forum" role="tab" aria-controls="pills-forum" aria-selected="false">Forum</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light border-rad" id="pills-podcast-tab" data-toggle="pill" href="#pills-podcast" role="tab" aria-controls="pills-podcast" aria-selected="false">Podcast</a>
+            </li>
+        </ul>
+
+        <div class="container mt-5">
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-konsultasi" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                    <!-- ISI KONSULTASI -->
+
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0" style="margin: 0px auto;">
+                            <div class="col-md-4">
+                                <img src="konsultasi.jpg" class="img-fluid rounded-start" height="100px" alt="konsultasi">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="pills-self-care" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                    <!-- ISI SELF CARE -->
+
+                </div>
+                <div class="tab-pane fade" id="pills-forum" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+                    <!-- ISI FORUM -->
+
+                </div>
+                <div class="tab-pane fade" id="pills-podcast" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+                    <!-- ISI PODCAST -->
+
+                </div>
+            </div>
+
+        </div>
 
     </div>
-  </div>
 
-  <!-- FITUR -->
-  <div class="container-fluid" style="height: 100vh;">
+    <!-- ABOUT US -->
+    <div class="container-fluid" style="height: 100vh;">
+        Hari minggu
+    </div>
 
-  </div>
+    <!-- FOOTER -->
+    <div class="container-fluid" style="height: 100vh;">
 
-  <!-- Optional JavaScript; choose one of the two! -->
+    </div>
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
 
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
