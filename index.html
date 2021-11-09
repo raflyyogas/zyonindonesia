@@ -29,26 +29,26 @@
                                 <img src="Logo.png" alt="logo" style="max-height: 45px;">
                             </a>
                             <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
                             <div class="collapse navbar-collapse" id="navbarText" style="width: 100vh;">
                                 <ul class="navbar-nav nav nav-fill me-auto mb-2 mb-lg-0 w-100 px-2">
                                     <li class="nav-item">
                                         <a class="nav-link text-light" aria-current="page" href="#">Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-light" href="#">Fitur</a>
+                                        <a class="nav-link text-light" href="#fitur">Fitur</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-light" href="#">Tentang</a>
+                                        <a class="nav-link text-light" href="#about">Tentang</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-light" href="#">Kontak</a>
+                                        <a class="nav-link text-light" href="#foot">Kontak</a>
                                     </li>
                                     <li class="nav-item">
                                         <button class="btn btn-login">
-                      Login
-                    </button>
+                                            Login
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -66,19 +66,19 @@
                     Ayo Mulai Peduli pada Kesehatan Mental !
                 </h1>
                 <button class="button-utama">
-          Konsultasi dengan Ekspert
-        </button>
+                    Konsultasi dengan Ekspert
+                </button>
             </div>
 
         </div>
     </div>
 
     <!-- FITUR -->
-    <div class="container-fluid position-static" style="height: 100vh;">
+    <div class="container-fluid position-static" style="height: 100vh;" id="fitur">
 
         <!-- HEADER FITUR -->
         <div class="fitur-head">
-            <h1 class="fitur-head-text">
+            <h1 class="head-text">
                 FITUR ZYON
             </h1>
         </div>
@@ -89,7 +89,8 @@
                 <a class="nav-link active link-light border-rad" id="pills-konsultasi-tab" data-toggle="pill" href="#pills-konsultasi" role="tab" aria-controls="pills-konsultasi" aria-selected="true">Konsultasi</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link link-light border-rad" id="pills-self-care-tab" data-toggle="pill" href="#pills-self-care" role="tab" aria-controls="pills-self-care" aria-selected="false">Self Care</a>
+                <a class="nav-link link-light border-rad" id="pills-self-care-tab" data-toggle="pill" href="#pills-self-care" role="tab" aria-controls="pills-self-care" aria-selected="false">Self
+                    Care</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link link-light border-rad" id="pills-forum-tab" data-toggle="pill" href="#pills-forum" role="tab" aria-controls="pills-forum" aria-selected="false">Forum</a>
@@ -106,20 +107,37 @@
 
                     <!-- ISI KONSULTASI -->
 
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0" style="margin: 0px auto;">
+                    <div class="card mb-3 fitur-card">
+                        <div class="row g-0" style="max-height: 550px;">
                             <div class="col-md-4">
-                                <img src="konsultasi.jpg" class="img-fluid rounded-start" height="100px" alt="konsultasi">
+                                <div class="card-img-top img-konsultasi">
+                                    <img src="konsultasi.jpg" alt="konsultasi">
+                                </div>
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-8 px-2">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <h2 class="konsultasi-head">KONSULTASI DENGAN EKSPERT</h2>
+
+                                    <div class="card-text box-deskripsi-konsultasi">
+                                        <p class="card-text">
+                                            Zyon bekerja sama dengan biro-biro psikologi di Indonesia untuk mempermudah user menemukan dan melakukan Konsultasi
+                                        </p>
+
+                                    </div>
+
+                                    <div class="card-text box-btn-konsultasi">
+                                        <button class="btn-fitur-konsultasi">
+                                            MULAI KONSULTASI
+                                        </button>
+                                        <p style="margin: 10px;"><small class="text-muted">atau</small></p>
+                                        <button class="btn-fitur-daftar-biro">
+                                            DAFTAR MENJADI BIRO KONSULTAN
+                                        </button>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                 </div>
@@ -127,15 +145,21 @@
 
                     <!-- ISI SELF CARE -->
 
+                    <h2 class="konsultasi-head">COMING SOON</h2>
+
                 </div>
                 <div class="tab-pane fade" id="pills-forum" role="tabpanel" aria-labelledby="pills-contact-tab">
 
                     <!-- ISI FORUM -->
 
+                    <h2 class="konsultasi-head">COMING SOON</h2>
+
                 </div>
                 <div class="tab-pane fade" id="pills-podcast" role="tabpanel" aria-labelledby="pills-contact-tab">
 
                     <!-- ISI PODCAST -->
+
+                    <h2 class="konsultasi-head">COMING SOON</h2>
 
                 </div>
             </div>
@@ -145,13 +169,89 @@
     </div>
 
     <!-- ABOUT US -->
-    <div class="container-fluid" style="height: 100vh;">
-        Hari minggu
+    <div class="container-fluid" style="height: 100vh;" id="about">
+        <!-- HEADER FITUR -->
+        <div class="about-head">
+            <h1 class="head-text">
+                ABOUT US
+                <hr style="text-decoration: #BCDFFF; width: 150px; height: 3px; margin: 0 auto;">
+            </h1>
+        </div>
+
+        <div class="row mt-3 mx-5" style="line-height: 2.5;">
+            <div class="col">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis diam nec ligula malesuada vestibulum. Quisque viverra venenatis sagittis. Proin vestibulum dui in augue tincidunt maximus
+            </div>
+        </div>
+        <div class="row mt-3 mx-5">
+            <div class="col">
+                <img src="vid.png" alt="about us" width="400px" height="400px">
+            </div>
+            <div class="col">
+                <h2>
+                    FEATURES?
+                </h2>
+                <div class="row">
+                    <div class="col-3">
+                        IMG
+                    </div>
+                    <div class="col-9">
+                        <h5>BEST COMMUNICATION</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        IMG
+                    </div>
+                    <div class="col-9">
+                        <h5>BEST CONSULTANT</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        IMG
+                    </div>
+                    <div class="col-9">
+                        <h5>BEST RESULT</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- FOOTER -->
-    <div class="container-fluid" style="height: 100vh;">
+    <div class="footer text-center mt-auto py-2 foot" id="foot">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 w-100">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="text-muted">© Zyon</span>
+            </div>
 
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </footer>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
