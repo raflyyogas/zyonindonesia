@@ -1,268 +1,507 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZYON INDONESIA</title>
+    <meta content="Dari Zyon, Untuk kamu" name="description" />
+    <meta content="psychology, Consultant, Helper, Cares" name="keywords" />
+    
+    <!-- SEO TAGS -->
+    <meta name="author" content="RYG" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="google" content="nositelinkssearchbox" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Zyon Indonesia</title>
-</head>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" /> 
+    <link href="assets/img/favicon.png" rel="apple-touch-icon" />
 
-<body>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
 
-    <!-- UTAMA -->
-    <div class="container-fluid bg-image bg-cover" style="height: 100vh;">
-        <div class="mask bg-cover-mask position-static" style="height: 100vh;">
-            <!-- NAVIGATOR -->
-            <div class="container-fluid navigator">
-                <div class="navigator-center">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
 
-                    <nav class="navbar navbar-expand-lg navbar-dark navigator-box">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
 
-                        <div class="container-fluid">
+    <!-- =======================================================
+  * Template Name: Zyon V1.2.0
+  * Author: RYG
+  ======================================================== -->
+  </head>
 
-                            <a class="navbar-brand px-2" href="#">
-                                <img src="Logo.png" alt="logo" style="max-height: 45px;">
-                            </a>
-                            <button class="navbar-toggler mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarText" style="width: 100vh;">
-                                <ul class="navbar-nav nav nav-fill me-auto mb-2 mb-lg-0 w-100 px-2">
-                                    <li class="nav-item">
-                                        <a class="nav-link text-light" aria-current="page" href="#">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-light" href="#fitur">Fitur</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-light" href="#about">Tentang</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-light" href="#foot">Kontak</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <button class="btn btn-login">
-                                            Login
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-                    </nav>
-
-                </div>
-            </div>
-
-            <!-- ISI-UTAMA -->
-            <div class="container-fluid konten-utama">
-                <h1 class="text-utama">
-                    Ayo Mulai Peduli pada Kesehatan Mental !
-                </h1>
-                <button class="button-utama">
-                    Konsultasi dengan Ekspert
-                </button>
-            </div>
-
+  <body>
+    <!-- NAVIGATOR -->
+    <nav class="navbar navbar-expand-lg bg-zyon sticky-top">
+      <div class="container-sm">
+        <a class="navbar-brand text-white text-center" href="#"><img src="assets/img/Logo.png" alt="logo" style="max-height: 45px" /></a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav text-center">
+            <a class="nav-link active text-white" aria-current="page" href="#zyon">Home</a>
+            <a class="nav-link active text-white" aria-current="page" href="#about">Tentang Kami</a>
+            <a class="nav-link active text-white" aria-current="page" href="#Layanan">Layanan</a>
+            <a class="nav-link active text-white" aria-current="page" href="#faq">FAQ</a>
+            <a class="nav-link active text-white" aria-current="page" href="#appointment">Kontak</a>
+          </div>
         </div>
-    </div>
+        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-person-circle"></i> Registrasi</button>
+      </div>
+    </nav>
 
-    <!-- FITUR -->
-    <div class="container-fluid position-static" style="height: 100vh;" id="fitur">
-
-        <!-- HEADER FITUR -->
-        <div class="fitur-head">
-            <h1 class="head-text">
-                FITUR ZYON
-            </h1>
-        </div>
-
-        <!-- ISI FITUR -->
-        <ul class="nav nav-pills nav-justified fitur-navigator" id="pills-tab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active link-light border-rad" id="pills-konsultasi-tab" data-toggle="pill" href="#pills-konsultasi" role="tab" aria-controls="pills-konsultasi" aria-selected="true">Konsultasi</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link link-light border-rad" id="pills-self-care-tab" data-toggle="pill" href="#pills-self-care" role="tab" aria-controls="pills-self-care" aria-selected="false">Self
-                    Care</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link link-light border-rad" id="pills-forum-tab" data-toggle="pill" href="#pills-forum" role="tab" aria-controls="pills-forum" aria-selected="false">Forum</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link link-light border-rad" id="pills-podcast-tab" data-toggle="pill" href="#pills-podcast" role="tab" aria-controls="pills-podcast" aria-selected="false">Podcast</a>
-            </li>
-        </ul>
-
-        <div class="container mt-5">
-
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-konsultasi" role="tabpanel" aria-labelledby="pills-home-tab">
-
-                    <!-- ISI KONSULTASI -->
-
-                    <div class="card mb-3 fitur-card">
-                        <div class="row g-0" style="max-height: 550px;">
-                            <div class="col-md-4">
-                                <div class="card-img-top img-konsultasi">
-                                    <img src="konsultasi.jpg" alt="konsultasi">
-                                </div>
-                            </div>
-                            <div class="col-md-8 px-2">
-                                <div class="card-body">
-                                    <h2 class="konsultasi-head">KONSULTASI DENGAN EKSPERT</h2>
-
-                                    <div class="card-text box-deskripsi-konsultasi">
-                                        <p class="card-text">
-                                            Zyon bekerja sama dengan biro-biro psikologi di Indonesia untuk mempermudah user menemukan dan melakukan Konsultasi
-                                        </p>
-
-                                    </div>
-
-                                    <div class="card-text box-btn-konsultasi">
-                                        <button class="btn-fitur-konsultasi">
-                                            MULAI KONSULTASI
-                                        </button>
-                                        <p style="margin: 10px;"><small class="text-muted">atau</small></p>
-                                        <button class="btn-fitur-daftar-biro">
-                                            DAFTAR MENJADI BIRO KONSULTAN
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="tab-pane fade" id="pills-self-care" role="tabpanel" aria-labelledby="pills-profile-tab">
-
-                    <!-- ISI SELF CARE -->
-
-                    <h2 class="konsultasi-head">COMING SOON</h2>
-
-                </div>
-                <div class="tab-pane fade" id="pills-forum" role="tabpanel" aria-labelledby="pills-contact-tab">
-
-                    <!-- ISI FORUM -->
-
-                    <h2 class="konsultasi-head">COMING SOON</h2>
-
-                </div>
-                <div class="tab-pane fade" id="pills-podcast" role="tabpanel" aria-labelledby="pills-contact-tab">
-
-                    <!-- ISI PODCAST -->
-
-                    <h2 class="konsultasi-head">COMING SOON</h2>
-
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- ABOUT US -->
-    <div class="container-fluid" style="height: 100vh;" id="about">
-        <!-- HEADER FITUR -->
-        <div class="about-head">
-            <h1 class="head-text">
-                ABOUT US
-                <hr style="text-decoration: #BCDFFF; width: 150px; height: 3px; margin: 0 auto;">
-            </h1>
-        </div>
-
-        <div class="row mt-3 mx-5" style="line-height: 2.5;">
-            <div class="col">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut iaculis diam nec ligula malesuada vestibulum. Quisque viverra venenatis sagittis. Proin vestibulum dui in augue tincidunt maximus
-            </div>
-        </div>
-        <div class="row mt-3 mx-5">
-            <div class="col">
-                <img src="vid.png" alt="about us" width="400px" height="400px">
-            </div>
-            <div class="col">
-                <h2>
-                    FEATURES?
-                </h2>
-                <div class="row">
-                    <div class="col-3">
-                        IMG
-                    </div>
-                    <div class="col-9">
-                        <h5>BEST COMMUNICATION</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3">
-                        IMG
-                    </div>
-                    <div class="col-9">
-                        <h5>BEST CONSULTANT</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3">
-                        IMG
-                    </div>
-                    <div class="col-9">
-                        <h5>BEST RESULT</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div class="footer text-center mt-auto py-2 foot" id="foot">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 w-100">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-                <span class="text-muted">© Zyon</span>
-            </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#twitter"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#instagram"></use>
-                        </svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg></a></li>
+    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <ul class="nav nav-tabs justify-content-center" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#regist">Registrasi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#login">Login</a>
+              </li>
             </ul>
-        </footer>
+            <div class="tab-content">
+              <div id="regist" class="container tab-pane active">
+                <br />
+                <h4>Registrasi</h4>
+                <form action="#" class="was-validated">
+                  <div class="mb-3 mt-3">
+                    <label for="uname" class="form-label">Username:</label>
+                    <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required />
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="pwd" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required />
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required />
+                    <label class="form-check-label" for="myCheck">I agree on agreement</label>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                  </div>
+                </form>
+              </div>
+              <div id="login" class="container tab-pane fade">
+                <br />
+                <h3>Login</h3>
+                <form action="#" class="was-validated">
+                  <div class="mb-3 mt-3">
+                    <label for="uname" class="form-label">Username:</label>
+                    <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required />
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="pwd" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required />
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required />
+                    <label class="form-check-label" for="myCheck">I agree on agreement</label>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- ======= Hero Section ======= -->
+    <section id="zyon" class="d-flex align-items-center">
+      <div class="container">
+        <h1>Welcome to Zyon</h1>
+        <h2>Dari Zyon, untuk kamu</h2>
+      </div>
+    </section>
+    <!-- End Hero -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <main id="main">
+      <!-- ======= Why Us Section ======= -->
+      <section id="why-us" class="why-us">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+              <div class="content">
+                <h3>Why Choose ZYON?</h3>
+                <p>We were concernen about Mental Health of people</p>
+                <div class="text-center">
+                  <a href="#about" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 d-flex align-items-stretch">
+              <div class="icon-boxes d-flex flex-column justify-content-center">
+                <div class="row">
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0">
+                      <i class="bx bx-receipt"></i>
+                      <h4>Corporis voluptates sit</h4>
+                      <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0">
+                      <i class="bx bx-cube-alt"></i>
+                      <h4>Ullamco laboris ladore pan</h4>
+                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 d-flex align-items-stretch">
+                    <div class="icon-box mt-4 mt-xl-0">
+                      <i class="bx bx-images"></i>
+                      <h4>Labore consequatur</h4>
+                      <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End .content-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Why Us Section -->
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about section-bg">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+              <a href="https://www.youtube.com/watch?v=bIKB15NT7uk" class="glightbox play-btn mb-4"></a>
+            </div>
+
+            <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+              <h3 class="text-center">About Us</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque ligula dictum magna elementum, sit amet pretium mauris fermentum. Nam fringilla sem nibh, non rhoncus odio iaculis et. Donec hendrerit tempor quam eu
+                venenatis. Aliquam ac bibendum purus. Nullam id elementum elit. Aenean vel aliquet tortor, ultricies cursus ante.
+              </p>
+
+              <div class="icon-box">
+                <div class="icon"><i class="fas fa-hands-helping"></i></div>
+                <h4 class="title"><a href="">CONSULTANT</a></h4>
+                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              </div>
+
+              <div class="icon-box">
+                <div class="icon"><i class="far fa-comments"></i></i></div>
+                <h4 class="title"><a href="">COMMUNICATION</a></h4>
+                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              </div>
+
+              <div class="icon-box">
+                <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h4 class="title"><a href="">RESULT</a></h4>
+                <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- ======= Layanan Section ======= -->
+      <section id="Layanan" class="Layanan">
+        <div class="container">
+          <div class="section-title">
+            <h2>Layanan</h2>
+            <p>
+              Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste
+              officiis commodi quidem hic quas.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-3">
+              <ul class="nav nav-tabs flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Konsultasi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Self Care</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Podcast</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Forum</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-9 mt-4 mt-lg-0">
+              <div class="tab-content">
+                <div class="tab-pane active show" id="tab-1">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Konsultasi</h3>
+                      <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                      <p>
+                        Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem
+                        quaerat quos qui similique accusamus nostrum rem vero
+                      </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="assets/img/layanan-1.jpg" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-2">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Self Care</h3>
+                      <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                      <p>
+                        Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode
+                        pakto madirna desera vafle de nideran pal
+                      </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="assets/img/layanan-2.jpg" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-3">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Podcast</h3>
+                      <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+                      <p>
+                        Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit
+                        ullam. Soluta et harum voluptatem optio quae
+                      </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="assets/img/layanan-3.jpg" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-4">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Forum</h3>
+                      <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
+                      <p>
+                        Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis
+                        aperiam quia a laborum inventore
+                      </p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="assets/img/layanan-4.jpg" alt="" class="img-fluid" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End layanan Section -->
+
+      <!-- ======= Frequently Asked Questions Section ======= -->
+      <section id="faq" class="faq section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>
+              Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste
+              officiis commodi quidem hic quas.
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <ul>
+              <li data-aos="fade-up">
+                <i class="bx bx-help-circle icon-help"></i>
+                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                </div>
+              </li>
+
+              <li data-aos="fade-up" data-aos-delay="100">
+                <i class="bx bx-help-circle icon-help"></i>
+                <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper
+                    dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  </p>
+                </div>
+              </li>
+
+              <li data-aos="fade-up" data-aos-delay="200">
+                <i class="bx bx-help-circle icon-help"></i>
+                <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna
+                    duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                  </p>
+                </div>
+              </li>
+
+              <li data-aos="fade-up" data-aos-delay="300">
+                <i class="bx bx-help-circle icon-help"></i>
+                <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed"
+                  >Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i
+                ></a>
+                <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis
+                    blandit turpis cursus in.
+                  </p>
+                </div>
+              </li>
+
+              <li data-aos="fade-up" data-aos-delay="400">
+                <i class="bx bx-help-circle icon-help"></i>
+                <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed"
+                  >Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i
+                ></a>
+                <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus
+                    vulputate eu scelerisque.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- End Frequently Asked Questions Section -->
+      <!-- ======= Appointment Section ======= -->
+      <section id="appointment" class="appointment">
+        <div class="container">
+          <div class="section-title">
+            <h2>Make an Appointment</h2>
+            <p>
+              Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste
+              officiis commodi quidem hic quas.
+            </p>
+          </div>
+
+          <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="col-md-4 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-4 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-4 form-group mt-3 mt-md-0">
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 form-group mt-3">
+                <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-4 form-group mt-3">
+                <select name="layanan" id="layanan" class="form-select">
+                  <option value="">Pilih Layanan</option>
+                  <option value="layanan">Konsultasi</option>
+                  <option value="layanan">Self Care</option>
+                  <option value="layanan">Podcast</option>
+                  <option value="layanan">Forum</option>
+                </select>
+                <div class="validate"></div>
+              </div>
+            </div>
+
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+              <div class="validate"></div>
+            </div>
+            <div class="mb-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Make an Appointment</button></div>
+          </form>
+        </div>
+      </section>
+      <!-- End Appointment Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container d-md-flex py-4">
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Zyon</span></strong
+            >. All Rights Reserved
+          </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
 
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var shrinkheader = 150;
+        $(window).scroll(function () {
+          var scroll = getCurrentScroll();
+          if (scroll >= shrinkheader) {
+            $(".navbar").addClass("navigator navigator-center navigator-box");
+          } else {
+            $(".navbar").removeClass("navigator navigator-center navigator-box");
+          }
+        });
+        function getCurrentScroll() {
+          return window.pageYoffset || document.documentElement.scrollTop;
+        }
+      });
+    </script>
+  </body>
 </html>
