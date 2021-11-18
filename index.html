@@ -1,24 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <title>ZYON INDONESIA</title>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Zyon Indonesia</title>
     <meta content="Dari Zyon, Untuk kamu" name="description" />
     <meta content="psychology, Consultant, Helper, Cares" name="keywords" />
-    
+
     <!-- SEO TAGS -->
-    <meta name="author" content="RYG" />
+    <meta name="author" content="RYG, Ditra" />
     <meta name="robots" content="noindex,nofollow" />
     <meta name="google" content="nositelinkssearchbox" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" /> 
+    <link href="assets/img/favicon.png" rel="icon" />
     <link href="assets/img/favicon.png" rel="apple-touch-icon" />
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
@@ -28,480 +27,571 @@
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- =======================================================
-  * Template Name: Zyon V1.2.0
-  * Author: RYG
-  ======================================================== -->
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- NAVIGATOR -->
-    <nav class="navbar navbar-expand-lg bg-zyon sticky-top">
-      <div class="container-sm">
-        <a class="navbar-brand text-white text-center" href="#"><img src="assets/img/Logo.png" alt="logo" style="max-height: 45px" /></a>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav text-center">
-            <a class="nav-link active text-white" aria-current="page" href="#zyon">Home</a>
-            <a class="nav-link active text-white" aria-current="page" href="#about">Tentang Kami</a>
-            <a class="nav-link active text-white" aria-current="page" href="#Layanan">Layanan</a>
-            <a class="nav-link active text-white" aria-current="page" href="#faq">FAQ</a>
-            <a class="nav-link active text-white" aria-current="page" href="#appointment">Kontak</a>
-          </div>
+    <div class="container-fluid navigator fixed-top">
+        <div class="navigator-center">
+
+            <nav class="navbar navbar-expand-lg navbar-dark navigator-box" id="navbar">
+
+                <div class="container-fluid">
+
+                    <a class="navbar-brand px-2" href="#">
+                        <img src="assets/img/Logo.png" alt="logo" style="max-height: 45px;" id="logo">
+                    </a>
+                    <button class="navbar-toggler mx-3 toggler-minimize" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" id="toggler">
+                        <span class="navbar-toggler-icon" id="icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText" style="width: 100vh;">
+                        <ul class="navbar-nav nav nav-fill me-auto mb-2 mb-lg-0 w-100 px-2">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#fitur">Fitur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#about">Tentang</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#foot">Kontak</a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#login-modal" id="login">
+                                    Login
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </nav>
+
         </div>
-        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#myModal"><i class="bi bi-person-circle"></i> Registrasi</button>
-      </div>
-    </nav>
-
-    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body">
-            <ul class="nav nav-tabs justify-content-center" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#regist">Registrasi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#login">Login</a>
-              </li>
-            </ul>
-            <div class="tab-content">
-              <div id="regist" class="container tab-pane active">
-                <br />
-                <h4>Registrasi</h4>
-                <form action="#" class="was-validated">
-                  <div class="mb-3 mt-3">
-                    <label for="uname" class="form-label">Username:</label>
-                    <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="pwd" class="form-label">Password:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                  </div>
-
-                  <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required />
-                    <label class="form-check-label" for="myCheck">I agree on agreement</label>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Check this checkbox to continue.</div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Close</button>
-                  </div>
-                </form>
-              </div>
-              <div id="login" class="container tab-pane fade">
-                <br />
-                <h3>Login</h3>
-                <form action="#" class="was-validated">
-                  <div class="mb-3 mt-3">
-                    <label for="uname" class="form-label">Username:</label>
-                    <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="pwd" class="form-label">Password:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required />
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Please fill out this field.</div>
-                  </div>
-
-                  <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required />
-                    <label class="form-check-label" for="myCheck">I agree on agreement</label>
-                    <div class="valid-feedback">Valid.</div>
-                    <div class="invalid-feedback">Check this checkbox to continue.</div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Close</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <!-- ======= Hero Section ======= -->
-    <section id="zyon" class="d-flex align-items-center">
-      <div class="container">
-        <h1>Welcome to Zyon</h1>
-        <h2>Dari Zyon, untuk kamu</h2>
-      </div>
+    <!-- LOGIN MODAL -->
+    <div class="modal content" id="login-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h2 class="fw-bold mb-0">Masuk</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-5 pb-5">
+                    <form action="#" method="post">
+                        <div class="form-floating mb-3">
+                            <input type="email" name="email-user" class="form-control rounded-4" id="floatingInput" name="email" placeholder="name@example.com" required>
+                            <label for="floatingInput">Email address</label>
+
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" name="pw-user" class="form-control rounded-4" id="floatingPassword" placeholder="Password" required>
+                            <label for="floatingPassword">Password</label>
+
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Masuk</button>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#resetpass-modal" data-dismiss="modal" aria-label="Close"><small class="text-muted">Lupa Password?</small></a>
+
+                        <hr class="my-4">
+
+                        <h2 class="fs-5 fw-bold mb-3">Belum memiliki akun?</h2>
+                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#regis-modal" data-dismiss="modal" aria-label="Close">
+                            Registrasi
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lupa Pass MODAL -->
+    <div class="modal content" id="resetpass-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h2 class="fw-bold mb-0">Lupa Password</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-5 pb-5">
+                    <form action="#" method="post">
+                        <div class="form-floating mb-3">
+                            <input type="email" name="email-user" class="form-control rounded-4" id="floatingInput" name="email" placeholder="name@example.com" required>
+                            <label for="floatingInput">Email address</label>
+
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-warning" type="submit">
+                            Kirim Email Verifikasi
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lupa Pass telah dikirim MODAL -->
+    <div class="modal content" id="resetpass-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+                <div class="modal-body px-5 pb-5">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- REGIS MODAL -->
+    <div class="modal content" id="regis-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h2 class="fw-bold mb-0">Masuk</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-5 pb-5">
+                    <form class="row g-3" action="#" method="post">
+                        <div class="form-floating col-md-6">
+                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="abc">
+                            <label class="px-3" for="#floatingInput">Nama Depan</label>
+
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-floating col-md-6">
+                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="abc">
+                            <label class="px-3" for="#floatingInput">Nama Belakang</label>
+
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-floating col-md-12">
+                            <input type="email" name="email-user" class="form-control rounded-4" id="floatingInput" name="email" placeholder="name@example.com" required>
+                            <label class="px-3" for="floatingInput">Email address</label>
+
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-floating col-md-6">
+                            <input type="password" name="pw-user" class="form-control rounded-4" id="floatingPassword" placeholder="Password" required>
+                            <label class="px-3" for="floatingPassword">Password</label>
+
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-floating col-md-6">
+                            <input type="password" class="form-control rounded-4" id="floatingInput" placeholder="abc">
+                            <label class="px-3" for="#floatingInput">Konfirmasi Password</label>
+
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-floating col-md-12">
+                            <input type="date" class="form-control rounded-4" id="floatingInput" placeholder="17/11/2021">
+                            <label class="px-3" for="#floatingInput">Tanggal Lahir</label>
+
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-floating col-md-12">
+                            <!-- NOMOR TELPON -->
+                            <input type="text" class="form-control rounded-4" id="phoneNumber" placeholder="(081x) xxxx-xxxx" required>
+                            <label class="px-3" for="#floatingInput">Nomor Handphone (Whatsapp)</label>
+
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <br>
+
+                        <div class="form-check col-mb-2">
+                            <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required />
+                            <label class="form-check-label" for="myCheck">Saya Menyetujui</label>
+                            <div class="invalid-feedback">Check this checkbox to continue.</div>
+                        </div>
+                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Daftarkan
+                            Akun</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UTAMA -->
+    <div class="container-fluid bg-image bg-cover" style="height: 100vh;">
+        <div class="mask bg-cover-mask position-static" style="height: 100vh;">
+
+
+            <!-- ISI-UTAMA -->
+            <div class="container-fluid konten-utama">
+                <h1 class="text-utama">
+                    Ayo Mulai Peduli pada Kesehatan Mental !
+                </h1>
+                <a class="button-utama" href="#fitur">
+                    Konsultasi dengan Ekspert
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FITUR -->
+    <div class="container-fluid position-static" style="min-height: 100vh;" id="fitur">
+
+        <!-- <section id="fitur"> -->
+        <!-- HEADER FITUR -->
+        <div class="fitur-head">
+            <h1 class="head-text">
+                FITUR ZYON
+            </h1>
+        </div>
+
+        <!-- ISI FITUR -->
+        <ul class="nav nav-pills nav-justified fitur-navigator" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active link-light border-rad" id="pills-konsultasi-tab" data-bs-toggle="pill" href="#pills-konsultasi" role="tab" aria-controls="pills-konsultasi" aria-selected="true">Konsultasi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light border-rad" id="pills-self-care-tab" data-bs-toggle="pill" href="#pills-self-care" role="tab" aria-controls="pills-self-care" aria-selected="false">Self
+                    Care</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light border-rad" id="pills-forum-tab" data-bs-toggle="pill" href="#pills-forum" role="tab" aria-controls="pills-forum" aria-selected="false">Forum</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-light border-rad" id="pills-podcast-tab" data-bs-toggle="pill" href="#pills-podcast" role="tab" aria-controls="pills-podcast" aria-selected="false">Podcast</a>
+            </li>
+        </ul>
+
+        <div class="container mt-5">
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-konsultasi" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                    <!-- ISI KONSULTASI -->
+
+                    <div class="card mb-3 fitur-card">
+                        <div class="row g-0" style="max-height: 4000px;">
+                            <div class="col-md-4">
+                                <div class="card-img-top img-konsultasi" style="background-image: url('assets/img/konsultasi.jpg');">
+                                </div>
+                            </div>
+                            <div class="col-md-8 px-2">
+                                <div class="card-body">
+                                    <h2 class="konsultasi-head">KONSULTASI DENGAN EKSPERT</h2>
+
+                                    <div class="card-text box-deskripsi-konsultasi">
+                                        <p class="card-text">
+                                            Zyon bekerja sama dengan biro-biro psikologi di Indonesia untuk mempermudah user menemukan dan melakukan Konsultasi
+                                        </p>
+                                    </div>
+
+                                    <div class="card-text box-btn-konsultasi">
+                                        <a class="btn-fitur-konsultasi" data-bs-toggle="modal" data-bs-target="#pilih-biro">
+                                            MULAI KONSULTASI
+                                        </a>
+                                        <p style="margin: 10px;"><small class="text-muted">atau</small></p>
+                                        <a class="btn-fitur-daftar-biro" href="https://api.whatsapp.com/send?phone=6282128863838&text=Saya%20tertarik%20mendaftarkan%20biro%20saya%20di%20Zyon.">
+                                            DAFTAR MENJADI BIRO KONSULTAN
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tab-pane fade" id="pills-self-care" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                    <!-- ISI SELF CARE -->
+
+                    <h2 class="konsultasi-head pos-middle">COMING SOON</h2>
+
+                </div>
+                <div class="tab-pane fade" id="pills-forum" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+                    <!-- ISI FORUM -->
+
+                    <h2 class="konsultasi-head pos-middle">COMING SOON</h2>
+
+                </div>
+                <div class="tab-pane fade" id="pills-podcast" role="tabpanel" aria-labelledby="pills-contact-tab">
+
+                    <!-- ISI PODCAST -->
+
+                    <h2 class="konsultasi-head pos-middle">COMING SOON</h2>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- PILIH BIRO MODAL -->
+        <div class="modal content" id="pilih-biro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+
+                <div class="modal-content">
+                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <h2 class="fw-bold mb-0">Pilih Biro</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body mb-0">
+                        <!-- Isi Biro -->
+                        <div class="accordion isi-biro">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            ULP Fakultas Psikologi UIN SGD Bandung
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        ULP Fakultas Psikologi adalah biro psikologi yang berbasis di UIN SGD Bandung.
+                                        <a href="https://api.whatsapp.com/send?phone=6282128863838&text=Saya%20tertarik%20melakukan%20konsultasi%20dengan%20ULP%20Fakultas%20Psikologi.">Lanjutkan</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            ULP Fakultas Psikologi UIN SGD Bandung
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                        on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                        craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            ULP Fakultas Psikologi UIN SGD Bandung
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird
+                                        on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                        craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ABOUT US -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg pb-5">
+        <div class="container-fluid pt-5">
+            <div class="head">
+                <h3 class="text-center">Tentang Kami</h3>
+                <p class="mx-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque ligula dictum magna elementum, sit amet pretium mauris fermentum. Nam fringilla sem nibh, non rhoncus odio iaculis et. Donec hendrerit tempor quam eu venenatis. Aliquam ac bibendum
+                    purus. Nullam id elementum elit. Aenean vel aliquet tortor, ultricies cursus ante.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 video-box d-flex justify-content-center align-items-stretch position-relative">
+                    <a href="https://www.youtube.com/watch?v=bIKB15NT7uk" class="glightbox play-btn mb-4"></a>
+                </div>
+
+                <div class="col-lg-7 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+                    <h3 class="text-center">YANG BISA KAMU DAPATKAN ?</h3>
+
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-hands-helping"></i></div>
+                        <h4 class="title">KONSULTASI</h4>
+                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                    </div>
+
+                    <div class="icon-box">
+                        <div class="icon"><i class="far fa-comments"></i></i>
+                        </div>
+                        <h4 class="title">KOMUNIKASI</h4>
+                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                    </div>
+
+                    <div class="icon-box">
+                        <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h4 class="title">HASIL</h4>
+                        <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- End Hero -->
-
-    <main id="main">
-      <!-- ======= Why Us Section ======= -->
-      <section id="why-us" class="why-us">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 d-flex align-items-stretch">
-              <div class="content">
-                <h3>Why Choose ZYON?</h3>
-                <p>We were concernen about Mental Health of people</p>
-                <div class="text-center">
-                  <a href="#about" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-8 d-flex align-items-stretch">
-              <div class="icon-boxes d-flex flex-column justify-content-center">
-                <div class="row">
-                  <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0">
-                      <i class="bx bx-receipt"></i>
-                      <h4>Corporis voluptates sit</h4>
-                      <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                    </div>
-                  </div>
-                  <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0">
-                      <i class="bx bx-cube-alt"></i>
-                      <h4>Ullamco laboris ladore pan</h4>
-                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                    </div>
-                  </div>
-                  <div class="col-xl-4 d-flex align-items-stretch">
-                    <div class="icon-box mt-4 mt-xl-0">
-                      <i class="bx bx-images"></i>
-                      <h4>Labore consequatur</h4>
-                      <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End .content-->
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Why Us Section -->
-
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about section-bg">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
-              <a href="https://www.youtube.com/watch?v=bIKB15NT7uk" class="glightbox play-btn mb-4"></a>
-            </div>
-
-            <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-              <h3 class="text-center">About Us</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque ligula dictum magna elementum, sit amet pretium mauris fermentum. Nam fringilla sem nibh, non rhoncus odio iaculis et. Donec hendrerit tempor quam eu
-                venenatis. Aliquam ac bibendum purus. Nullam id elementum elit. Aenean vel aliquet tortor, ultricies cursus ante.
-              </p>
-
-              <div class="icon-box">
-                <div class="icon"><i class="fas fa-hands-helping"></i></div>
-                <h4 class="title"><a href="">CONSULTANT</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-              </div>
-
-              <div class="icon-box">
-                <div class="icon"><i class="far fa-comments"></i></i></div>
-                <h4 class="title"><a href="">COMMUNICATION</a></h4>
-                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-              </div>
-
-              <div class="icon-box">
-                <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
-                <h4 class="title"><a href="">RESULT</a></h4>
-                <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End About Section -->
-
-      <!-- ======= Layanan Section ======= -->
-      <section id="Layanan" class="Layanan">
-        <div class="container">
-          <div class="section-title">
-            <h2>Layanan</h2>
-            <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste
-              officiis commodi quidem hic quas.
-            </p>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-3">
-              <ul class="nav nav-tabs flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Konsultasi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Self Care</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Podcast</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Forum</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-9 mt-4 mt-lg-0">
-              <div class="tab-content">
-                <div class="tab-pane active show" id="tab-1">
-                  <div class="row">
-                    <div class="col-lg-8 details order-2 order-lg-1">
-                      <h3>Konsultasi</h3>
-                      <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                      <p>
-                        Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem
-                        quaerat quos qui similique accusamus nostrum rem vero
-                      </p>
-                    </div>
-                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                      <img src="assets/img/layanan-1.jpg" alt="" class="img-fluid" />
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane" id="tab-2">
-                  <div class="row">
-                    <div class="col-lg-8 details order-2 order-lg-1">
-                      <h3>Self Care</h3>
-                      <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                      <p>
-                        Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode
-                        pakto madirna desera vafle de nideran pal
-                      </p>
-                    </div>
-                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                      <img src="assets/img/layanan-2.jpg" alt="" class="img-fluid" />
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane" id="tab-3">
-                  <div class="row">
-                    <div class="col-lg-8 details order-2 order-lg-1">
-                      <h3>Podcast</h3>
-                      <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
-                      <p>
-                        Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit
-                        ullam. Soluta et harum voluptatem optio quae
-                      </p>
-                    </div>
-                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                      <img src="assets/img/layanan-3.jpg" alt="" class="img-fluid" />
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane" id="tab-4">
-                  <div class="row">
-                    <div class="col-lg-8 details order-2 order-lg-1">
-                      <h3>Forum</h3>
-                      <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                      <p>
-                        Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis
-                        aperiam quia a laborum inventore
-                      </p>
-                    </div>
-                    <div class="col-lg-4 text-center order-1 order-lg-2">
-                      <img src="assets/img/layanan-4.jpg" alt="" class="img-fluid" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End layanan Section -->
-
-      <!-- ======= Frequently Asked Questions Section ======= -->
-      <section id="faq" class="faq section-bg">
-        <div class="container">
-          <div class="section-title">
-            <h2>Frequently Asked Questions</h2>
-            <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste
-              officiis commodi quidem hic quas.
-            </p>
-          </div>
-
-          <div class="faq-list">
-            <ul>
-              <li data-aos="fade-up">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="100">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper
-                    dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="200">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna
-                    duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="300">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed"
-                  >Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis
-                    blandit turpis cursus in.
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="400">
-                <i class="bx bx-help-circle icon-help"></i>
-                <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed"
-                  >Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i
-                ></a>
-                <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus
-                    vulputate eu scelerisque.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- End Frequently Asked Questions Section -->
-      <!-- ======= Appointment Section ======= -->
-      <section id="appointment" class="appointment">
-        <div class="container">
-          <div class="section-title">
-            <h2>Make an Appointment</h2>
-            <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste
-              officiis commodi quidem hic quas.
-            </p>
-          </div>
-
-          <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
-            <div class="row">
-              <div class="col-md-4 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-              </div>
-              <div class="col-md-4 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validate"></div>
-              </div>
-              <div class="col-md-4 form-group mt-3 mt-md-0">
-                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 form-group mt-3">
-                <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-              </div>
-              <div class="col-md-4 form-group mt-3">
-                <select name="layanan" id="layanan" class="form-select">
-                  <option value="">Pilih Layanan</option>
-                  <option value="layanan">Konsultasi</option>
-                  <option value="layanan">Self Care</option>
-                  <option value="layanan">Podcast</option>
-                  <option value="layanan">Forum</option>
-                </select>
-                <div class="validate"></div>
-              </div>
-            </div>
-
-            <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
-              <div class="validate"></div>
-            </div>
-            <div class="mb-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Make an Appointment</button></div>
-          </form>
-        </div>
-      </section>
-      <!-- End Appointment Section -->
-    </main>
-    <!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="container d-md-flex py-4">
-        <div class="me-md-auto text-center text-md-start">
-          <div class="copyright">
-            &copy; Copyright <strong><span>Zyon</span></strong
-            >. All Rights Reserved
-          </div>
-        </div>
-        <div class="social-links text-center text-md-right pt-3 pt-md-0">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
 
     <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Vendor JS Files -->
+    <!-- FOOTER -->
+    <div class="footer text-center mt-auto py-2 foot" id="foot">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center my-2 w-100">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="logo"><img src="assets/img/Logo.png" alt="logo" width="200px"></span>
+            </div>
+            <div class="col-md-4 justify-content-end d-flex">
+                <ul class="contact">
+                    <li>
+                        <a class="text-light row" href="https://wa.me/message/ORU2POH45X6OC1">
+                            <span class="col-sm-4">
+                                WHATSAPP
+                            </span>
+                            <span class="col-sm-8">
+                                : +62 821-2886-3838
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-light row" href="https://www.instagram.com/zyon.id/">
+                            <span class="col-sm-4">
+                                INSTAGRAM
+                            </span>
+                            <span class="col-sm-8">
+                                : @ZYON.ID
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-light row" href="tel:+6282128863838">
+                            <span class="col-sm-4">
+                                TELEPON
+                            </span>
+                            <span class="col-sm-8">
+                                : +62 821-2886-3838
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
+    <!-- JS -->
     <script>
-      $(document).ready(function () {
-        var shrinkheader = 150;
-        $(window).scroll(function () {
-          var scroll = getCurrentScroll();
-          if (scroll >= shrinkheader) {
-            $(".navbar").addClass("navigator navigator-center navigator-box");
-          } else {
-            $(".navbar").removeClass("navigator navigator-center navigator-box");
-          }
-        });
-        function getCurrentScroll() {
-          return window.pageYoffset || document.documentElement.scrollTop;
-        }
-      });
+        const isNumericInput = (event) => {
+            const key = event.keyCode;
+            return ((key >= 48 && key <= 57) || // Allow number line
+                (key >= 96 && key <= 105) // Allow number pad
+            );
+        };
+
+        const isModifierKey = (event) => {
+            const key = event.keyCode;
+            return (event.shiftKey === true || key === 35 || key === 36) || // Allow Shift, Home, End
+                (key === 8 || key === 9 || key === 13 || key === 46) || // Allow Backspace, Tab, Enter, Delete
+                (key > 36 && key < 41) || // Allow left, up, right, down
+                (
+                    // Allow Ctrl/Command + A,C,V,X,Z
+                    (event.ctrlKey === true || event.metaKey === true) &&
+                    (key === 65 || key === 67 || key === 86 || key === 88 || key === 90)
+                )
+        };
+
+        const enforceFormat = (event) => {
+            // Input must be of a valid number format or a modifier key, and not longer than ten digits
+            if (!isNumericInput(event) && !isModifierKey(event)) {
+                event.preventDefault();
+            }
+        };
+
+        const formatToPhone = (event) => {
+            if (isModifierKey(event)) {
+                return;
+            }
+
+            const input = event.target.value.replace(/\D/g, '').substring(0, 13); // First ten digits of input only
+            const areaCode = input.substring(0, 4);
+            const middle = input.substring(4, 8);
+            const last = input.substring(8, 13);
+
+            if (input.length > 7) {
+                event.target.value = `(${areaCode}) ${middle}-${last}`;
+            } else if (input.length > 4) {
+                event.target.value = `(${areaCode}) ${middle}`;
+            } else if (input.length > 0) {
+                event.target.value = `(${areaCode}`;
+            }
+        };
+
+        const inputElement = document.getElementById('phoneNumber');
+        inputElement.addEventListener('keydown', enforceFormat);
+        inputElement.addEventListener('keyup', formatToPhone);
     </script>
-  </body>
+
+    <!-- JQuery -->
+    <script>
+        $(document).ready(function() {
+            var shrinkheader = 70;
+            $(window).scroll(function() {
+                var scroll = getCurrentScroll();
+                if (scroll >= shrinkheader) {
+                    $("#navbar").addClass("navigator-box-minimize");
+                    $("#logo").addClass("logo-login-minimize");
+                    $("#login").addClass("btn-login-minimize");
+                    $("#toggler").addClass("toggler-height-minimize");
+                    $("#icon").addClass("icon-toggler-minimize");
+
+                } else {
+                    $("#navbar").removeClass("navigator-box-minimize");
+                    $("#logo").removeClass("logo-login-minimize");
+                    $("#login").removeClass("btn-login-minimize");
+                    $("#toggler").removeClass("toggler-height-minimize");
+                    $("#icon").removeClass("icon-toggler-minimize");
+                }
+            });
+
+            function getCurrentScroll() {
+                return window.pageYoffset || document.documentElement.scrollTop;
+            }
+        });
+    </script>
+</body>
+
 </html>
