@@ -4,7 +4,8 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Zyon Indonesia</title>
     <meta content="Dari Zyon, Untuk kamu" name="description" />
@@ -34,8 +35,79 @@
 </head>
 
 <body>
+
+<?php 
+	require('conn.php');
+	
+    // <div aria-live='polite' aria-atomic='true' class='d-flex justify-content-center align-items-center w-100'>
+    // <div class='toast-container position-absolute align-items-center text-white bg-primary border-0 bottom-0 start-0 show' role='alert' aria-live='assertive' aria-atomic='true'>
+    //     <div class='d-flex'>
+    //         <div class='toast-body'>
+    //         Hello, world! This is a toast message.
+    //         </div>
+    //         <button type='button' class='btn-close btn-close-white me-2 m-auto' data-bs-dismiss='toast' aria-label='Close'></button>
+    //     </div>
+    // </div>
+    // </div>
+?>
+
     <!-- NAVIGATOR -->
     <div class="container-fluid navigator fixed-top">
+
+<?php
+session_start();
+if(isset($_POST['login']))
+{
+    if((isset($_POST['email-user']) && $_POST['email-user'] !='') && (isset($_POST['pw-user']) && $_POST['pw-user'] !=''))
+    {
+
+        $email_user = trim($_POST['email-user']);
+        $password_user = trim($_POST['pw-user']);
+        $newPass = password_hash($password_user,PASSWORD_DEFAULT);
+        
+        $sqlEmail = "select * from Users where email = '".$email_user."'";
+        $rs = mysqli_query($conn,$sqlEmail);
+        
+        $numRows = mysqli_num_rows($rs);
+        
+        if($numRows  == 1)
+        {
+            $row = mysqli_fetch_assoc($rs);
+
+            if(password_verify($password_user,$row['password']))
+            {
+                $_SESSION['user_id'] = $row['ID'];
+                
+                echo "
+                <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                    <strong>Berhasil Login!</strong> Halo ".$row['NamaDepan']."
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+                ";
+            }
+            else
+            {
+                echo "
+                <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                    <strong>Gagal Login!</strong> Wrong Email Or Password
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+                ";
+            }
+        }
+        else
+        {
+            echo "
+            <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                <strong>Gagal Login!</strong> User not found
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+            ";
+        }
+    }
+}
+?>
+
         <div class="navigator-center">
 
             <nav class="navbar navbar-expand-lg navbar-dark navigator-box" id="navbar">
@@ -59,10 +131,30 @@
                             <li class="nav-item">
                                 <a class="nav-link text-light" href="#about">Tentang</a>
                             </li>
+                            </li>
                             <li class="nav-item">
-                                <button class="btn btn-login" data-bs-toggle="modal" data-bs-target="#login-modal" id="login">
-                                    Login
-                                </button>
+                                <a class="nav-link text-light" href="#foot">Kontak</a>
+                            </li>
+                            <li class="nav-item">
+                                
+                                    <?php
+                                    if(isset($_POST['login'])){
+                                        echo "
+                                        <form>
+                                        <button class='nav-link btn' style='border-style: none; color: white;' href='#'>
+                                            Profil
+                                        </button>
+                                        </form>
+                                        ";
+                                    }else{
+                                        echo "
+                                        <button class='btn btn-login' data-bs-toggle='modal' data-bs-target='#login-modal' id='login'>
+                                        Login
+                                        </button>
+                                        ";
+                                    }
+                                    ?>
+                                                          
                             </li>
                         </ul>
                     </div>
@@ -75,37 +167,39 @@
     </div>
 
     <!-- LOGIN MODAL -->
-    <div class="modal content" id="login-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <div class='modal content' id='login-modal' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='staticBackdropLabel' aria-hidden='true'>
+        <div class='modal-dialog modal-dialog-centered'>
 
-            <div class="modal-content">
-                <div class="modal-header p-5 pb-4 border-bottom-0">
-                    <h2 class="fw-bold mb-0">Masuk</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class='modal-content'>
+                <div class='modal-header p-5 pb-4 border-bottom-0'>
+                    <h2 class='fw-bold mb-0'>Masuk</h2>
+                    <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
                 </div>
-                <div class="modal-body px-5 pb-5">
-                    <form action="#" method="post">
-                        <div class="form-floating mb-3">
+                <div class='modal-body px-5 pb-5'>
+                    <form action="<?php echo $_SERVER['PHP_SELF']?>" method='post'>
+                        <div class='form-floating mb-3'>
                             <input type="email" name="email-user" class="form-control rounded-4" id="floatingInput" name="email" placeholder="name@example.com" required>
                             <label for="floatingInput">Email address</label>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
-                        <div class="form-floating mb-3">
+                        <div class='form-floating mb-3'>
                             <input type="password" name="pw-user" class="form-control rounded-4" id="floatingPassword" placeholder="Password" required>
                             <label for="floatingPassword">Password</label>
 
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
-                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Masuk</button>
-                        <a class="btn" data-bs-toggle="modal" data-bs-target="#resetpass-modal" data-dismiss="modal" aria-label="Close"><small class="text-muted">Lupa Password?</small></a>
+                        <button name='login' type='submit' class='w-100 mb-2 btn btn-lg rounded-4 btn-primary'>
+                            Masuk
+                        </button>
+                        <a class='btn' data-bs-toggle='modal' data-bs-target='#resetpass-modal' data-dismiss='modal' aria-label='Close'><small class='text-muted'>Lupa Password?</small></a>
 
-                        <hr class="my-4">
+                        <hr class='my-4'>
 
-                        <h2 class="fs-5 fw-bold mb-3">Belum memiliki akun?</h2>
-                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#regis-modal" data-dismiss="modal" aria-label="Close">
+                        <h2 class='fs-5 fw-bold mb-3'>Belum memiliki akun?</h2>
+                        <button class='w-100 mb-2 btn btn-lg rounded-4 btn-secondary' type='button' data-bs-toggle='modal' data-bs-target='#regis-modal' data-dismiss='modal' aria-label='Close'>
                             Registrasi
                         </button>
 
@@ -165,21 +259,21 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-5 pb-5">
-                    <form class="row g-3" action="#" method="post">
+                    <form class="row g-3" action="conn.php" method="post">
                         <div class="form-floating col-md-6">
-                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="abc">
+                            <input type="text" name="namaD" class="form-control rounded-4" id="floatingInput" placeholder="abc">
                             <label class="px-3" for="#floatingInput">Nama Depan</label>
 
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                         <div class="form-floating col-md-6">
-                            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="abc">
+                            <input type="text" name="namaB" class="form-control rounded-4" id="floatingInput" placeholder="abc">
                             <label class="px-3" for="#floatingInput">Nama Belakang</label>
 
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                         <div class="form-floating col-md-12">
-                            <input type="email" name="email-user" class="form-control rounded-4" id="floatingInput" name="email" placeholder="name@example.com" required>
+                            <input type="email" name="email-user" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com" required>
                             <label class="px-3" for="floatingInput">Email address</label>
 
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -191,21 +285,21 @@
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                         <div class="form-floating col-md-6">
-                            <input type="password" class="form-control rounded-4" id="floatingInput" placeholder="abc">
+                            <input type="password" name="konf-pw-user" class="form-control rounded-4" id="floatingInput" placeholder="abc">
                             <label class="px-3" for="#floatingInput">Konfirmasi Password</label>
 
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                         <div class="form-floating col-md-12">
-                            <input type="date" class="form-control rounded-4" id="floatingInput" placeholder="17/11/2021">
+                            <input type="date" name="tanggal-lahir" class="form-control rounded-4" id="floatingInput" placeholder="17/11/2021">
                             <label class="px-3" for="#floatingInput">Tanggal Lahir</label>
 
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                         <div class="form-floating col-md-12">
                             <!-- NOMOR TELPON -->
-                            <input type="text" class="form-control rounded-4" id="phoneNumber" placeholder="(081x) xxxx-xxxx" required>
-                            <label class="px-3" for="#floatingInput">Nomor Handphone (Whatsapp)</label>
+                            <input type="text" name="no-wa" class="form-control rounded-4" id="phoneNumber" placeholder="(081x) xxxx-xxxx" required>
+                            <label class="px-3" for="#phoneNumber">Nomor Handphone (Whatsapp)</label>
 
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
@@ -216,8 +310,9 @@
                             <label class="form-check-label" for="myCheck">Saya Menyetujui</label>
                             <div class="invalid-feedback">Check this checkbox to continue.</div>
                         </div>
-                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Daftarkan
-                            Akun</button>
+                        <button type="submit" name="regis" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary">Daftarkan
+                            Akun
+                        </button>
 
                     </form>
                 </div>
@@ -228,7 +323,6 @@
     <!-- UTAMA -->
     <div class="container-fluid bg-image bg-cover" style="height: 100vh;">
         <div class="mask bg-cover-mask" style="height: 100vh;">
-
 
             <!-- ISI-UTAMA -->
             <div class="container-fluid konten-utama">
@@ -244,9 +338,8 @@
     </div>
 
     <!-- FITUR -->
-    <div class="container-fluid" id="fitur">
+    <div class="container-fluid" id="fitur" style="height: 110vh;">
 
-        <!-- <section id="fitur"> -->
         <!-- HEADER FITUR -->
         <div class="fitur-head">
             <h1 class="head-text">
@@ -365,7 +458,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
+                            <!-- <div class="card">
                                 <div class="card-header" id="headingTwo">
                                     <h2 class="mb-0">
                                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -396,7 +489,7 @@
                                         craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
 
@@ -558,6 +651,34 @@
         const inputElement = document.getElementById('phoneNumber');
         inputElement.addEventListener('keydown', enforceFormat);
         inputElement.addEventListener('keyup', formatToPhone);
+    </script>
+
+    <!-- JQuery -->
+    <script>
+        $(document).ready(function() {
+            var shrinkheader = 70;
+            $(window).scroll(function() {
+                var scroll = getCurrentScroll();
+                if (scroll >= shrinkheader) {
+                    $("#navbar").addClass("navigator-box-minimize");
+                    $("#logo").addClass("logo-login-minimize");
+                    $("#login").addClass("btn-login-minimize");
+                    $("#toggler").addClass("toggler-height-minimize");
+                    $("#icon").addClass("icon-toggler-minimize");
+
+                } else {
+                    $("#navbar").removeClass("navigator-box-minimize");
+                    $("#logo").removeClass("logo-login-minimize");
+                    $("#login").removeClass("btn-login-minimize");
+                    $("#toggler").removeClass("toggler-height-minimize");
+                    $("#icon").removeClass("icon-toggler-minimize");
+                }
+            });
+
+            function getCurrentScroll() {
+                return window.pageYoffset || document.documentElement.scrollTop;
+            }
+        });
     </script>
 </body>
 
