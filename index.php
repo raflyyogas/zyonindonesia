@@ -55,6 +55,7 @@
     <div class="container-fluid navigator fixed-top">
 
 <?php
+
     if(isset($_POST['login']))
     {
         if((isset($_POST['email-user']) && $_POST['email-user'] !='') && (isset($_POST['pw-user']) && $_POST['pw-user'] !=''))
@@ -74,16 +75,15 @@
 
                 if(password_verify($password_user,$tampil['password']))
                 {             
-                    
-                    session_start();   
                     $_SESSION['user_id'] = $tampil['ID'];
-                    echo "
-                    <div class='alert alert-success alert-dismissible fade show' role='alert'>
-                        <strong>Berhasil Login!</strong> Halo ".$tampil['NamaDepan']."
-                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                    </div>
-                    ";
-                    die();
+                    if((!empty($_SESSION['user_id']))){
+                        echo "
+                        <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                            <strong>Berhasil Login!</strong> Halo ".$tampil['NamaDepan']."
+                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                        </div>
+                        ";
+                    };
                 }
                 else 
                 {
@@ -106,6 +106,7 @@
             }
         }
     }
+    
 ?>
 
 <?php 
@@ -160,16 +161,14 @@
                             <li class="nav-item">
                                 
                                     <?php
-                                    if(isset($_POST['login'])){
-                                        if(isset($_SESSION['user_id'])){
-                                            echo "
-
-                                            <form action='dashboard.php' method='GET'>
-                                                <button class='nav-link btn' style='border-style: none; color: white;' type='submit' value='".$tampil['ID']."' name='ID'>
-                                                    Dashboard
-                                                </button>
-                                            </form>
-                                            ";}
+                                    if(!empty($_SESSION['user_id'])){
+                                        echo "
+                                        <form action='dashboard.php' method='GET'>
+                                            <button class='nav-link btn' style='border-style: none; color: white;' type='submit' value='".$tampil['ID']."' name='ID'>
+                                                Dashboard
+                                            </button>
+                                        </form>
+                                        ";
                                     }else{
                                         echo "
                                         <button class='btn btn-login' data-bs-toggle='modal' data-bs-target='#login-modal' id='login'>
@@ -448,7 +447,7 @@
 
                     <h2 class="konsultasi-head pos-middle">COMING SOON</h2>
 
-                </div>
+                </div> 
 
             </div>
         </div>
