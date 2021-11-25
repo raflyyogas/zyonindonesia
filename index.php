@@ -37,7 +37,7 @@
 <body>
 
 <?php 
-	require('conn.php');
+	require('create.php');
 	
     // <div aria-live='polite' aria-atomic='true' class='d-flex justify-content-center align-items-center w-100'>
     // <div class='toast-container position-absolute align-items-center text-white bg-primary border-0 bottom-0 start-0 show' role='alert' aria-live='assertive' aria-atomic='true'>
@@ -55,58 +55,80 @@
     <div class="container-fluid navigator fixed-top">
 
 <?php
-session_start();
-if(isset($_POST['login']))
-{
-    if((isset($_POST['email-user']) && $_POST['email-user'] !='') && (isset($_POST['pw-user']) && $_POST['pw-user'] !=''))
+    if(isset($_POST['login']))
     {
-
-        $email_user = trim($_POST['email-user']);
-        $password_user = trim($_POST['pw-user']);
-        $newPass = password_hash($password_user,PASSWORD_DEFAULT);
-        
-        $sqlEmail = "select * from Users where email = '".$email_user."'";
-        $rs = mysqli_query($conn,$sqlEmail);
-        
-        $numRows = mysqli_num_rows($rs);
-        
-        if($numRows  == 1)
+        if((isset($_POST['email-user']) && $_POST['email-user'] !='') && (isset($_POST['pw-user']) && $_POST['pw-user'] !=''))
         {
-            $row = mysqli_fetch_assoc($rs);
 
-            if(password_verify($password_user,$row['password']))
+            $email_user = trim($_POST['email-user']);
+            $password_user = trim($_POST['pw-user']);
+            
+            $sqlEmail = "select * from Users where email = '".$email_user."'";
+            $rs = mysqli_query($conn,$sqlEmail);
+            
+            $numRows = mysqli_num_rows($rs);
+            
+            if($numRows  == 1)
             {
-                $_SESSION['user_id'] = $row['ID'];
-                
-                echo "
-                <div class='alert alert-success alert-dismissible fade show' role='alert'>
-                    <strong>Berhasil Login!</strong> Halo ".$row['NamaDepan']."
-                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                </div>
-                ";
+                $tampil = mysqli_fetch_array($rs);
+
+                if(password_verify($password_user,$tampil['password']))
+                {             
+                    
+                    session_start();   
+                    $_SESSION['user_id'] = $tampil['ID'];
+                    echo "
+                    <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                        <strong>Berhasil Login!</strong> Halo ".$tampil['NamaDepan']."
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                    </div>
+                    ";
+                    die();
+                }
+                else 
+                {
+                    echo "
+                    <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                        <strong>Gagal Login!</strong> Wrong Email Or Password
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                    </div>
+                    ";
+                }
             }
             else
             {
                 echo "
                 <div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                    <strong>Gagal Login!</strong> Wrong Email Or Password
+                    <strong>Gagal Login!</strong> User not found
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                 </div>
                 ";
             }
         }
-        else
-        {
-            echo "
-            <div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                <strong>Gagal Login!</strong> User not found
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-            </div>
-            ";
-        }
     }
-}
 ?>
+
+<?php 
+        if(isset($_GET['alert'])){
+            if($_GET['alert']=="berhasil")
+            {
+                echo "
+                    <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                    <strong>Berhasil Daftar!</strong> Silahkan Login
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>
+                    ";
+            } else{
+                echo "
+                    <div class='alert alert-success alert-dismissible'>
+                        <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
+                        <h4><i class='icon fa fa-check'></i> Failed</h4>
+                        Gagal menyimpan User
+                    </div>
+                    ";
+            }
+        }
+    ?>
 
         <div class="navigator-center">
 
@@ -139,13 +161,15 @@ if(isset($_POST['login']))
                                 
                                     <?php
                                     if(isset($_POST['login'])){
-                                        echo "
-                                        <form>
-                                        <button class='nav-link btn' style='border-style: none; color: white;' href='#'>
-                                            Profil
-                                        </button>
-                                        </form>
-                                        ";
+                                        if(isset($_SESSION['user_id'])){
+                                            echo "
+
+                                            <form action='dashboard.php' method='GET'>
+                                                <button class='nav-link btn' style='border-style: none; color: white;' type='submit' value='".$tampil['ID']."' name='ID'>
+                                                    Dashboard
+                                                </button>
+                                            </form>
+                                            ";}
                                     }else{
                                         echo "
                                         <button class='btn btn-login' data-bs-toggle='modal' data-bs-target='#login-modal' id='login'>
@@ -259,7 +283,7 @@ if(isset($_POST['login']))
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body px-5 pb-5">
-                    <form class="row g-3" action="conn.php" method="post">
+                    <form class="row g-3" action="create.php" method="post">
                         <div class="form-floating col-md-6">
                             <input type="text" name="namaD" class="form-control rounded-4" id="floatingInput" placeholder="abc">
                             <label class="px-3" for="#floatingInput">Nama Depan</label>
@@ -310,7 +334,7 @@ if(isset($_POST['login']))
                             <label class="form-check-label" for="myCheck">Saya Menyetujui</label>
                             <div class="invalid-feedback">Check this checkbox to continue.</div>
                         </div>
-                        <button type="submit" name="regis" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary">Daftarkan
+                        <button type="button" name="regis" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary">Daftarkan
                             Akun
                         </button>
 
@@ -651,34 +675,6 @@ if(isset($_POST['login']))
         const inputElement = document.getElementById('phoneNumber');
         inputElement.addEventListener('keydown', enforceFormat);
         inputElement.addEventListener('keyup', formatToPhone);
-    </script>
-
-    <!-- JQuery -->
-    <script>
-        $(document).ready(function() {
-            var shrinkheader = 70;
-            $(window).scroll(function() {
-                var scroll = getCurrentScroll();
-                if (scroll >= shrinkheader) {
-                    $("#navbar").addClass("navigator-box-minimize");
-                    $("#logo").addClass("logo-login-minimize");
-                    $("#login").addClass("btn-login-minimize");
-                    $("#toggler").addClass("toggler-height-minimize");
-                    $("#icon").addClass("icon-toggler-minimize");
-
-                } else {
-                    $("#navbar").removeClass("navigator-box-minimize");
-                    $("#logo").removeClass("logo-login-minimize");
-                    $("#login").removeClass("btn-login-minimize");
-                    $("#toggler").removeClass("toggler-height-minimize");
-                    $("#icon").removeClass("icon-toggler-minimize");
-                }
-            });
-
-            function getCurrentScroll() {
-                return window.pageYoffset || document.documentElement.scrollTop;
-            }
-        });
     </script>
 </body>
 

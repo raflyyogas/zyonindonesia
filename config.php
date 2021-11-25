@@ -9,7 +9,7 @@ $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
 
 if(!$conn)
 	{
-		die(mysqli_error());
+		die(mysqli_error($conn));
 	}
 
 ?>
