@@ -2,33 +2,30 @@
 include 'config.php';
 
 if(isset($_POST['regis'])){
-    echo 'tes';
     $namaD = $_POST['namaD'];
     $namaB = $_POST['namaB'];
     $email = $_POST['email-user'];
     $password = $_POST['pw-user'];
+    $confpw = $_POST['konf-pw-user'];
     $hashedPass=password_hash($password,PASSWORD_DEFAULT);
     $TanggalLahir = $_POST['tanggal-lahir'];
     $noWA = $_POST['no-wa'];
 
-    $regis_query = "
-    INSERT INTO 
-    Users(NamaDepan, NamaBelakang, email, password, TanggalLahir, no_WA)
-    VALUES('$namaD', '$namaB', '$email', '$hashedPass', '$TanggalLahir', '$noWA')
-    ";
     
-    $registrasi = mysqli_query($conn,$regis_query);
-    printf($registrasi);
-    if ( false===$registrasi ) {
-        printf("error: %s\n", mysqli_error($conn));
-        print_r($noWA);
-      }
+    if(password_verify($confpw, $hashedPass)){
+        $regis_query = "INSERT INTO Users(NamaDepan, NamaBelakang, email, password, TanggalLahir, no_WA) VALUES('$namaD', '$namaB', '$email', '$hashedPass', '$TanggalLahir', '$noWA')";
+    
+        $registrasi = mysqli_query($conn,$regis_query);
 
-    if ($registrasi){
-        header("location:index.php?alert=berhasil");
+        if (!$registrasi ) {
+            printf("error: %s\n", mysqli_error($conn));
+        }else{
+            header("location:index.php?alert=berhasil");
+        }
     }else{
-        echo 'upload gagal';
+        header("location:index.php?alert=gagal");
     }
+    
 }
 
 if($conn->connect_error){

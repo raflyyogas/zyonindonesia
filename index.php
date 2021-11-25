@@ -115,16 +115,15 @@
             {
                 echo "
                     <div class='alert alert-success alert-dismissible fade show' role='alert'>
-                    <strong>Berhasil Daftar!</strong> Silahkan Login
-                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                </div>
+                        <strong>Berhasil Daftar!</strong> Silahkan Login
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                    </div>
                     ";
-            } else{
+            } elseif($_GET['alert']=="gagal"){
                 echo "
-                    <div class='alert alert-success alert-dismissible'>
-                        <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>
-                        <h4><i class='icon fa fa-check'></i> Failed</h4>
-                        Gagal menyimpan User
+                    <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                        <strong>Gagal Daftar!</strong> Password tidak sama
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                     </div>
                     ";
             }
@@ -308,7 +307,7 @@
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
                         <div class="form-floating col-md-6">
-                            <input type="password" name="konf-pw-user" class="form-control rounded-4" id="floatingInput" placeholder="abc">
+                            <input type="password" name="konf-pw-user" class="form-control rounded-4" id="floatingInput" placeholder="password" required>
                             <label class="px-3" for="#floatingInput">Konfirmasi Password</label>
 
                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -333,7 +332,7 @@
                             <label class="form-check-label" for="myCheck">Saya Menyetujui</label>
                             <div class="invalid-feedback">Check this checkbox to continue.</div>
                         </div>
-                        <button type="button" name="regis" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary">Daftarkan
+                        <button type="submit" name="regis" class="w-100 mb-2 btn btn-lg rounded-4 btn-primary">Daftarkan
                             Akun
                         </button>
 

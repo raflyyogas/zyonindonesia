@@ -1,10 +1,12 @@
 <?php 
-    // include 'config.php';
-    // $id = $_GET['ID'];
+    include 'config.php';
+    $id = $_GET['ID'];
     
-    // $data = "SELECT * FROM users WHERE id = '$id'";
-    // $update = mysqli_query($conn,$data);
-    // while($d = mysqli_fetch_assoc($update)){
+    $data = "SELECT * FROM users WHERE id = '".$id."'";
+    $update = mysqli_query($conn,$data);
+    while($d = mysqli_fetch_assoc($update)){
+        $nama_depan = $d['NamaDepan'];
+    }
 ?>
 
 <!DOCTYPE html>
@@ -36,18 +38,6 @@
 </head>
 
 <body id="page-top">
-
-<?php
-include 'config.php';
-$id = $_GET['ID'];
-
-$data = "SELECT * FROM Users WHERE ID = '".$id."'";
-$update = mysqli_query($conn,$data);
-
-while($d = mysqli_fetch_assoc($update)){
-    $nama_depan = $d['NamaDepan'];
-}
-?>
 
     <!-- Page Wrapper -->
     <div id="wrapper">        
