@@ -75,7 +75,7 @@
 
                 if(password_verify($password_user,$tampil['password']))
                 {             
-                    $_SESSION['user_id'] = $tampil['ID'];
+                    $_SESSION['user_id'] = $tampil['Id'];
                     if((!empty($_SESSION['user_id']))){
                         echo "
                         <div class='alert alert-success alert-dismissible fade show' role='alert'>
@@ -163,7 +163,7 @@
                                     if(!empty($_SESSION['user_id'])){
                                         echo "
                                         <form action='dashboard.php' method='GET'>
-                                            <button class='nav-link btn' style='border-style: none; color: white;' type='submit' value='".$tampil['ID']."' name='ID'>
+                                            <button class='nav-link btn' style='border-style: none; color: white;' type='submit' value='".$tampil['Id']."' name='ID'>
                                                 Dashboard
                                             </button>
                                         </form>
